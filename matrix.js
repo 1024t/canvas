@@ -8,9 +8,9 @@
 	   	},this);
 	   this.length=args.length;
 	}
-	Array.prototype.forEach.call(new Matrix,function(item,index){
-		console.log(item,index);
-	});
+	// Array.prototype.forEach.call(new Matrix,function(item,index){
+	// 	console.log(item,index);
+	// });
 	Matrix.prototype = {
 		constructor:Matrix,
 	    rotate:function (r) {
