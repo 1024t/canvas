@@ -2,7 +2,7 @@
 * @Author: wanghongxin
 * @Date:   2015-07-16 13:27:46
 * @Last Modified by:   wanghongxin
-* @Last Modified time: 2015-07-16 14:13:32
+* @Last Modified time: 2015-07-17 18:27:24
 */
 ;(function(root,factory){
     var _=factory.call(root);
@@ -55,6 +55,12 @@
             return function(){
                 return fn.apply(null,args);
             };
+        },
+        singleton:function(fn){
+            var ret;
+            return function(){
+                return ret||(ret=fn.apply(null,arguments));
+            }
         }
     }
 }));
