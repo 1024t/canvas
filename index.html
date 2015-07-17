@@ -33,8 +33,30 @@
 <canvas ></canvas>
 <!-- <script type="text/javascript" src="query.js"></script>
 <script type="text/javascript" src="canvas.js"></script> -->
-<script type="text/javascript" src="requestNextAnimationFrame.js"></script>
+<script type="text/javascript" src="js/sprite.js"></script>
 <script>
+var canvas=document.querySelector('canvas'),
+    context=canvas.getContext('2d'),
+    cell=[{
+        x:0,
+        y:0,
+        width:100,
+        height:100
+    },{
+        x:100,
+        y:0,
+        width:100,
+        height:100
+    }];
+var imageSheet=new ImageSheetPainter('img/city.jpg',cell);
+var sprite=new Sprite('mt',imageSheet);
+sprite.fill({
+    left:100,
+    top:20,
+    width:100,
+    height:100,
+    context:context
+});
 </script>
 </body>
 </html>
